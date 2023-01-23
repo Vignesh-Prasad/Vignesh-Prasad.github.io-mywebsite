@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="background">
+            <div class="nav">
+                <a class="a active"href="#">Home</a>
+                <a class="b" href="#">about</a>
+                <a class="c" href="#">projects</a>
+                <a class="d" href="#">contact</a>
+            </div>
+        <div class="content">
+            <div class="home">
+                <h1>vignesh prasad</h1>
+                <h3>Information Technology student</h3>
+            </div>
+            <div class="about">
+                <p><b>Hello Friends,</b><br>
+                    I am Vignesh Prasad<br> My second name is Vikram I am studying Information Technology in Thiagarajar college of Engineering.
+                    My hobbies are reading books, watching series. I love programming. My skills are HTML, CSS, JS, 
+                    Python, C.<br>
+                    My Area of Interest is <b>Ethical Hacking</b>. It is also called as penetration testing which is an act of intruding/penetrating into system
+                    or networks to find out threats, vulnerabilities in those systems which a malicious attacker may find and exploit causing loss of data, financial loss or other 
+                    major damages.
+                </p>
+            </div>
+            <div class="projects">
+                <p>
+                    <b>Designed a simple webpage for Home school buying</b><br>
+                    <b>Designed a prototype of Agricultural Marketing Management system</b><br>
+                    <b>Designed Textile shop management system using mysql as backend</b><br>
+                    <b>Desinged a prototype of food safety ensuring system</b>
+                </p>
+            </div>
+            <div class="contact">
+                <p><b>Name: S. Vignesh Prasad</b></p><br>
+                <p><b>Phone no.: 9385996005</b></p><br>
+                <p><b>Gmail: vigneshprasads2000@gmail.com</b></p>
+
+            </div>
+
+        </div> 
+        </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('a').click(function(){
+                //alert("I am clicking");
+                var selected = $(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+
+
+            });
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $d = $('.d'),
+            $home = $('.home'),
+            $about = $('.about'),
+            $projects = $('.projects'),
+            $contact = $('.contact');
+
+
+            $a.click(function(){
+                $home.fadeIn();
+                $about.fadeOut();
+                $projects.fadeOut();
+                $contact.fadeOut();
+                
+
+            });
+            $b.click(function(){
+                $about.fadeIn();
+                $home.fadeOut();
+                $projects.fadeOut();
+                $contact.fadeOut();
+                
+
+            });
+            $c.click(function(){
+                $projects.fadeIn();
+                $home.fadeOut();
+                $about.fadeOut();
+                $contact.fadeOut();
+            });
+            $d.click(function(){
+                $contact.fadeIn();
+                $home.fadeOut();
+                $about.fadeOut();
+                $projects.fadeOut();
+            });
+
+        });
+    
+    
+    </script>
+    </body>
+</html>
